@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "enhancedtools:item/copper_enhancing_smithing_template"
+  }
+}

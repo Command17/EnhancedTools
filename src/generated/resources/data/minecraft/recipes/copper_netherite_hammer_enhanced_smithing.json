@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "enhancedtools:netherite_hammer"
+  },
+  "result": {
+    "item": "enhancedtools:copper_netherite_hammer"
+  },
+  "template": {
+    "item": "enhancedtools:copper_enhancing_smithing_template"
+  }
+}

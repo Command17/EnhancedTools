@@ -1,0 +1,77 @@
+{
+  "creativemodetab.enhancedtools.enhanced_tools": "Enhanced Tools",
+
+  "item.enhancedtools.smithing_template.copper_enhancing.applies_to": "Tools",
+  "item.enhancedtools.smithing_template.copper_enhancing.ingredients": "Copper Ingot",
+  "item.enhancedtools.copper_enhancing": "Copper Enhancing",
+  "item.enhancedtools.smithing_template.copper_enhancing.base_slot_description": "Add tool",
+  "item.enhancedtools.smithing_template.copper_enhancing.additions_slot_description" : "Add Copper Ingot",
+
+  "item.enhancedtools.copper_bow": "Copper Bow",
+  "item.enhancedtools.copper_crossbow": "Copper Crossbow",
+
+  "item.enhancedtools.iron_adze": "Iron Adze",
+  "item.enhancedtools.golden_adze": "Golden Adze",
+  "item.enhancedtools.diamond_adze": "Diamond Adze",
+  "item.enhancedtools.netherite_adze": "Netherite Adze",
+
+  "item.enhancedtools.copper_iron_adze": "Copper Iron Adze",
+  "item.enhancedtools.copper_golden_adze": "Copper Golden Adze",
+  "item.enhancedtools.copper_diamond_adze": "Copper Diamond Adze",
+  "item.enhancedtools.copper_netherite_adze": "Copper Netherite Adze",
+
+  "item.enhancedtools.iron_hammer": "Iron Hammer",
+  "item.enhancedtools.golden_hammer": "Golden Hammer",
+  "item.enhancedtools.diamond_hammer": "Diamond Hammer",
+  "item.enhancedtools.netherite_hammer": "Netherite Hammer",
+
+  "item.enhancedtools.copper_iron_hammer": "Copper Iron Hammer",
+  "item.enhancedtools.copper_golden_hammer": "Copper Golden Hammer",
+  "item.enhancedtools.copper_diamond_hammer": "Copper Diamond Hammer",
+  "item.enhancedtools.copper_netherite_hammer": "Copper Netherite Hammer",
+
+  "item.enhancedtools.copper_wooden_sword": "Copper Wooden Sword",
+  "item.enhancedtools.copper_wooden_shovel": "Copper Wooden Shovel",
+  "item.enhancedtools.copper_wooden_pickaxe": "Copper Wooden Pickaxe",
+  "item.enhancedtools.copper_wooden_axe": "Copper Wooden Axe",
+  "item.enhancedtools.copper_wooden_hoe": "Copper Wooden Hoe",
+
+  "item.enhancedtools.copper_stone_sword": "Copper Stone Sword",
+  "item.enhancedtools.copper_stone_shovel": "Copper Stone Shovel",
+  "item.enhancedtools.copper_stone_pickaxe": "Copper Stone Pickaxe",
+  "item.enhancedtools.copper_stone_axe": "Copper Stone Axe",
+  "item.enhancedtools.copper_stone_hoe": "Copper Stone Hoe",
+
+  "item.enhancedtools.copper_golden_sword": "Copper Golden Sword",
+  "item.enhancedtools.copper_golden_shovel": "Copper Golden Shovel",
+  "item.enhancedtools.copper_golden_pickaxe": "Copper Golden Pickaxe",
+  "item.enhancedtools.copper_golden_axe": "Copper Golden Axe",
+  "item.enhancedtools.copper_golden_hoe": "Copper Golden Hoe",
+
+  "item.enhancedtools.copper_iron_sword": "Copper Iron Sword",
+  "item.enhancedtools.copper_iron_shovel": "Copper Iron Shovel",
+  "item.enhancedtools.copper_iron_pickaxe": "Copper Iron Pickaxe",
+  "item.enhancedtools.copper_iron_axe": "Copper Iron Axe",
+  "item.enhancedtools.copper_iron_hoe": "Copper Iron Hoe",
+
+  "item.enhancedtools.copper_diamond_sword": "Copper Diamond Sword",
+  "item.enhancedtools.copper_diamond_shovel": "Copper Diamond Shovel",
+  "item.enhancedtools.copper_diamond_pickaxe": "Copper Diamond Pickaxe",
+  "item.enhancedtools.copper_diamond_axe": "Copper Diamond Axe",
+  "item.enhancedtools.copper_diamond_hoe": "Copper Diamond Hoe",
+
+  "item.enhancedtools.copper_netherite_sword": "Copper Netherite Sword",
+  "item.enhancedtools.copper_netherite_shovel": "Copper Netherite Shovel",
+  "item.enhancedtools.copper_netherite_pickaxe": "Copper Netherite Pickaxe",
+  "item.enhancedtools.copper_netherite_axe": "Copper Netherite Axe",
+  "item.enhancedtools.copper_netherite_hoe": "Copper Netherite Hoe",
+
+  "enchantment.enhancedtools.explosive_arrows": "Explosive Arrows",
+  "enchantment.enhancedtools.hammering": "Hammering",
+
+  "advancement.enhancedtools.title.enhancing": "ENHANCE!!",
+  "advancement.enhancedtools.description.enhancing": "Enhance any Tool using Copper",
+
+  "advancement.enhancedtools.title.obtain_netherite_hammer": "Real Expensive",
+  "advancement.enhancedtools.description.obtain_netherite_hammer": "Obtain a Netherite Hammer"
+}

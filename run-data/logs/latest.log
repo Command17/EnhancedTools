@@ -1,0 +1,36 @@
+[21Juni2024 23:00:13.477] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\comma\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.32, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, enhancedtools, --all, --output, C:\Users\comma\Documents\Mods\EnhancedTools\src\generated\resources, --existing, C:\Users\comma\Documents\Mods\EnhancedTools\src\main\resources, --mixin.config, enhancedtools.mixins.json]
+[21Juni2024 23:00:13.481] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.4.1 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[21Juni2024 23:00:13.584] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[21Juni2024 23:00:13.621] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/comma/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[21Juni2024 23:00:13.846] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\comma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.32\9d7e04e58b558bf95759e2d94b77944a0845d1cb\javafmllanguage-1.20.1-47.2.32.jar is missing mods.toml file
+[21Juni2024 23:00:13.849] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\comma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.32\38d24291ba53d0eebaa2830618f331bc728d4b90\lowcodelanguage-1.20.1-47.2.32.jar is missing mods.toml file
+[21Juni2024 23:00:13.852] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\comma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.32\63a076b8fcbb860cfddb7cec5c1374338a5043da\mclanguage-1.20.1-47.2.32.jar is missing mods.toml file
+[21Juni2024 23:00:13.854] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\comma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.32\cb79ea145f390bce56ce90e2cc62eb6928911801\fmlcore-1.20.1-47.2.32.jar is missing mods.toml file
+[21Juni2024 23:00:13.923] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[21Juni2024 23:00:15.211] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\comma\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, enhancedtools, --all, --output, C:\Users\comma\Documents\Mods\EnhancedTools\src\generated\resources, --existing, C:\Users\comma\Documents\Mods\EnhancedTools\src\main\resources]
+[21Juni2024 23:00:15.292] [main/WARN] [mixin/]: Reference map 'EnhancedTools.refmap.json' for enhancedtools.mixins.json could not be read. If this is a development environment you can ignore this message
+[21Juni2024 23:00:15.678] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [enhancedtools]
+[21Juni2024 23:00:18.952] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Initializing...
+[21Juni2024 23:00:18.969] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.32, for MC 1.20.1 with MCP 20230612.114412
+[21Juni2024 23:00:18.970] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.32 Initialized
+[21Juni2024 23:00:18.980] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Registered Items.
+[21Juni2024 23:00:18.984] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Registered Enchantments.
+[21Juni2024 23:00:18.985] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Registered Creative Mode Tabs.
+[21Juni2024 23:00:18.994] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Built Config.
+[21Juni2024 23:00:18.994] [modloading-worker-0/INFO] [com.github.command17.enhancedtools.EnhancedTools/]: Initialized.
+[21Juni2024 23:00:19.164] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[21Juni2024 23:00:19.169] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.739 ms
+[21Juni2024 23:00:19.369] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/comma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.32_mapped_official_1.20.1/forge-1.20.1-47.2.32_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[21Juni2024 23:00:19.369] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/comma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.32_mapped_official_1.20.1/forge-1.20.1-47.2.32_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[21Juni2024 23:00:19.573] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[21Juni2024 23:00:19.620] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 46 ms
+[21Juni2024 23:00:19.621] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: enhancedtools
+[21Juni2024 23:00:19.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: enhancedtools finished after 33 ms
+[21Juni2024 23:00:19.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id enhancedtools
+[21Juni2024 23:00:19.718] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id enhancedtools finished after 63 ms
+[21Juni2024 23:00:19.718] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id enhancedtools
+[21Juni2024 23:00:19.731] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id enhancedtools finished after 13 ms
+[21Juni2024 23:00:19.731] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[21Juni2024 23:00:19.748] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 16 ms
+[21Juni2024 23:00:19.748] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 175 ms
+[21Juni2024 23:00:19.763] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 225, old count: 225, new count: 226, removed stale: 0, written: 1

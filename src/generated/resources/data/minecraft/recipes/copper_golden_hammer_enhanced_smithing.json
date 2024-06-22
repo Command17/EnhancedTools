@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "enhancedtools:golden_hammer"
+  },
+  "result": {
+    "item": "enhancedtools:copper_golden_hammer"
+  },
+  "template": {
+    "item": "enhancedtools:copper_enhancing_smithing_template"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:story/iron_tools",
+  "criteria": {
+    "has_enhancement_item": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhancedtools:enhanced_tools"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.enhancedtools.description.enhancing"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhancedtools:copper_iron_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhancedtools.title.enhancing"
+    }
+  },
+  "requirements": [
+    [
+      "has_enhancement_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

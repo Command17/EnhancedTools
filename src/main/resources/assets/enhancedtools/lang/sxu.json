@@ -1,0 +1,77 @@
+{
+  "creativemodetab.enhancedtools.enhanced_tools": "Enhanced Tools",
+
+  "item.enhancedtools.smithing_template.copper_enhancing.applies_to": "Werkzeugen",
+  "item.enhancedtools.smithing_template.copper_enhancing.ingredients": "Kupferbarren",
+  "item.enhancedtools.copper_enhancing": "Kupferverbesserung",
+  "item.enhancedtools.smithing_template.copper_enhancing.base_slot_description": "Werkzeug hinzufügen",
+  "item.enhancedtools.smithing_template.copper_enhancing.additions_slot_description" : "Kupferbarren hinzufügen",
+
+  "item.enhancedtools.copper_bow": "Kupferbogen",
+  "item.enhancedtools.copper_crossbow": "Kupferarmbrust",
+
+  "item.enhancedtools.iron_adze": "Eisendechsel",
+  "item.enhancedtools.golden_adze": "Golddechsel",
+  "item.enhancedtools.diamond_adze": "Diamantdechsel",
+  "item.enhancedtools.netherite_adze": "Netheritdechsel",
+
+  "item.enhancedtools.copper_iron_adze": "Kupfer-Eisendechsel",
+  "item.enhancedtools.copper_golden_adze": "Kupfer-Golddechsel",
+  "item.enhancedtools.copper_diamond_adze": "Kupfer-Diamantdechsel",
+  "item.enhancedtools.copper_netherite_adze": "Kupfer-Netheritdechsel",
+
+  "item.enhancedtools.iron_hammer": "Eisenhammer",
+  "item.enhancedtools.golden_hammer": "Goldhammer",
+  "item.enhancedtools.diamond_hammer": "Diamanthammer",
+  "item.enhancedtools.netherite_hammer": "Netherithammer",
+
+  "item.enhancedtools.copper_iron_hammer": "Kupfer-Eisenhammer",
+  "item.enhancedtools.copper_golden_hammer": "Kupfer-Goldhammer",
+  "item.enhancedtools.copper_diamond_hammer": "Kupfer-Diamanthammer",
+  "item.enhancedtools.copper_netherite_hammer": "Kupfer-Netherithammer",
+
+  "item.enhancedtools.copper_wooden_sword": "Kupfer-Holzschwert",
+  "item.enhancedtools.copper_wooden_shovel": "Kupfer-Holzschaufel",
+  "item.enhancedtools.copper_wooden_pickaxe": "Kupfer-Holzspitzhacke",
+  "item.enhancedtools.copper_wooden_axe": "Kupfer-Holzsaxt",
+  "item.enhancedtools.copper_wooden_hoe": "Kupfer-Holzhacke",
+
+  "item.enhancedtools.copper_stone_sword": "Kupfer-Steinschwert",
+  "item.enhancedtools.copper_stone_shovel": "Kupfer-Steinschaufel",
+  "item.enhancedtools.copper_stone_pickaxe": "Kupfer-Steinspitzhacke",
+  "item.enhancedtools.copper_stone_axe": "Kupfer-Steinaxt",
+  "item.enhancedtools.copper_stone_hoe": "Kupfer-Steinhacke",
+
+  "item.enhancedtools.copper_golden_sword": "Kupfer-Goldschwert",
+  "item.enhancedtools.copper_golden_shovel": "Kupfer-Goldschaufel",
+  "item.enhancedtools.copper_golden_pickaxe": "Kupfer-Goldspitzhacke",
+  "item.enhancedtools.copper_golden_axe": "Kupfer-Goldaxt",
+  "item.enhancedtools.copper_golden_hoe": "Kupfer-Goldhacke",
+
+  "item.enhancedtools.copper_iron_sword": "Kupfer-Eisenschwert",
+  "item.enhancedtools.copper_iron_shovel": "Kupfer-Eisenschaufel",
+  "item.enhancedtools.copper_iron_pickaxe": "Kupfer-Eisenspitzhacke",
+  "item.enhancedtools.copper_iron_axe": "Kupfer-Eisenaxt",
+  "item.enhancedtools.copper_iron_hoe": "Kupfer-Eisenhacke",
+
+  "item.enhancedtools.copper_diamond_sword": "Kupfer-Diamantschwert",
+  "item.enhancedtools.copper_diamond_shovel": "Kupfer-Diamantschaufel",
+  "item.enhancedtools.copper_diamond_pickaxe": "Kupfer-Diamantspitzhacke",
+  "item.enhancedtools.copper_diamond_axe": "Kupfer-Diamantaxt",
+  "item.enhancedtools.copper_diamond_hoe": "Kupfer-Diamanthacke",
+
+  "item.enhancedtools.copper_netherite_sword": "Kupfer-Netheritschwert",
+  "item.enhancedtools.copper_netherite_shovel": "Kupfer-Netheritschaufel",
+  "item.enhancedtools.copper_netherite_pickaxe": "Kupfer-Netheritspitzhacke",
+  "item.enhancedtools.copper_netherite_axe": "Kupfer-Netheritaxt",
+  "item.enhancedtools.copper_netherite_hoe": "Kupfer-Netherithacke",
+
+  "enchantment.enhancedtools.explosive_arrows": "Bombenpfeile",
+  "enchantment.enhancedtools.hammering": "Hämmern",
+
+  "advancement.enhancedtools.title.enhancing": "ENHANCE!!",
+  "advancement.enhancedtools.description.enhancing": "Verbessere ein Werkzeug mit Kupfer",
+
+  "advancement.enhancedtools.title.obtain_netherite_hammer": "Richtig teuer",
+  "advancement.enhancedtools.description.obtain_netherite_hammer": "Erhalte ein Netherithammer"
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "enhancedtools:item/copper_crossbow",
+    "textures": {
+        "layer0": "enhancedtools:item/copper_crossbow_firework"
+    }
+}

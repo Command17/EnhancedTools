@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:iron_block"
+    },
+    "x": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "XxX",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "enhancedtools:iron_hammer"
+  },
+  "show_notification": true
+}

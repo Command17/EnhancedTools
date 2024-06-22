@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "enhancedtools:diamond_adze"
+  },
+  "result": {
+    "item": "enhancedtools:copper_diamond_adze"
+  },
+  "template": {
+    "item": "enhancedtools:copper_enhancing_smithing_template"
+  }
+}

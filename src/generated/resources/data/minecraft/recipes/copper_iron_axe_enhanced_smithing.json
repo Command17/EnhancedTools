@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_axe"
+  },
+  "result": {
+    "item": "enhancedtools:copper_iron_axe"
+  },
+  "template": {
+    "item": "enhancedtools:copper_enhancing_smithing_template"
+  }
+}

@@ -1,0 +1,9 @@
+// 1.20.1	2024-06-21T22:47:32.7380471	Tags for minecraft:item mod id enhancedtools
+9c457899a0612459da3adfde080c6cc96d2298ea data/enhancedtools/tags/items/adzes.json
+4de84e900b95a082b0fe188ff99cc67a36ece02b data/enhancedtools/tags/items/copper_projectile_shooters.json
+d30a9e4fb88edc8e30483b8ee050801ecf4af5bc data/enhancedtools/tags/items/enhanced_tools.json
+50091ed48f3c745779775549d9780e3f71ee109f data/enhancedtools/tags/items/hammers.json
+03b76fd0db14337d4730267bdbbb67ead33be37b data/forge/tags/items/tools.json
+658d39717b11f0e7f6e6f8034b470315ccd59524 data/forge/tags/items/tools/bows.json
+3824beeb03bffaefce8b657d7bc5ab91bb6b953c data/forge/tags/items/tools/crossbows.json
+03b76fd0db14337d4730267bdbbb67ead33be37b data/minecraft/tags/items/tools.json

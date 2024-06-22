@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 180,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "enhancedtools:copper_golden_hammer"
+  },
+  "result": "minecraft:gold_ingot"
+}

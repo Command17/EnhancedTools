@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 180,
+  "experience": 0.4,
+  "ingredient": {
+    "item": "enhancedtools:copper_golden_axe"
+  },
+  "result": "minecraft:gold_nugget"
+}
