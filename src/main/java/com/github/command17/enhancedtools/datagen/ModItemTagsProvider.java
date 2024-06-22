@@ -9,7 +9,8 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -30,7 +31,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.COPPER_BOW.get())
                 .add(ModItems.COPPER_CROSSBOW.get());
 
-        tag(ModTags.ItemTag.FORGE_TOOLS_TAG)
+        tag(ModTags.ItemTag.NEOFORGE_TOOLS_TAG)
                 .add(ModItems.COPPER_BOW.get())
                 .add(ModItems.COPPER_CROSSBOW.get())
 
@@ -89,7 +90,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.COPPER_GOLDEN_HAMMER.get())
                 .add(ModItems.COPPER_DIAMOND_HAMMER.get())
                 .add(ModItems.COPPER_NETHERITE_HAMMER.get());
-
+        /*
         tag(ItemTags.TOOLS)
                 .add(ModItems.COPPER_BOW.get())
                 .add(ModItems.COPPER_CROSSBOW.get())
@@ -149,6 +150,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.COPPER_GOLDEN_HAMMER.get())
                 .add(ModItems.COPPER_DIAMOND_HAMMER.get())
                 .add(ModItems.COPPER_NETHERITE_HAMMER.get());
+         */
 
         tag(ModTags.ItemTag.ENHANCED_TOOLS_TAG)
                 .add(ModItems.COPPER_BOW.get())
@@ -223,7 +225,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.COPPER_NETHERITE_HAMMER.get());
 
 
-        tag(ModTags.ItemTag.FORGE_BOWS_TAG).add(ModItems.COPPER_BOW.get());
-        tag(ModTags.ItemTag.FORGE_CROSSBOWS_TAG).add(ModItems.COPPER_CROSSBOW.get());
+        tag(ModTags.ItemTag.NEOFORGE_BOWS_TAG).add(ModItems.COPPER_BOW.get());
+        tag(ModTags.ItemTag.NEOFORGE_CROSSBOWS_TAG).add(ModItems.COPPER_CROSSBOW.get());
     }
 }

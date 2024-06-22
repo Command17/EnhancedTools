@@ -24,19 +24,4 @@ public interface ICrossbowAccessorMixin {
 
     @Accessor("midLoadSoundPlayed")
     void setMidLoadSoundPlayed(boolean value);
-
-    @Invoker("getChargedProjectiles")
-    static List<ItemStack> getChargedProjectiles(ItemStack stack) {
-        throw new AssertionError();
-    }
-
-    @Invoker("onCrossbowShot")
-    static void onCrossbowShot(Level level, LivingEntity entity, ItemStack stack) {
-        throw new AssertionError();
-    }
-
-    @Invoker("getShotPitches")
-    static float[] getShotPitches(RandomSource random) {
-        throw new AssertionError();
-    }
 }

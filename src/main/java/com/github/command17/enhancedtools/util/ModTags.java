@@ -10,9 +10,9 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class ItemTag {
-        public static final TagKey<Item> FORGE_TOOLS_TAG = forgeTag("tools");
-        public static final TagKey<Item> FORGE_BOWS_TAG = forgeTag("tools/bows");
-        public static final TagKey<Item> FORGE_CROSSBOWS_TAG = forgeTag("tools/crossbows");
+        public static final TagKey<Item> NEOFORGE_TOOLS_TAG = neoforgeTag("tools");
+        public static final TagKey<Item> NEOFORGE_BOWS_TAG = neoforgeTag("tools/bows");
+        public static final TagKey<Item> NEOFORGE_CROSSBOWS_TAG = neoforgeTag("tools/crossbows");
 
         public static final TagKey<Item> ENHANCED_TOOLS_TAG = tag("enhanced_tools");
         public static final TagKey<Item> COPPER_PROJECTILE_SHOOTERS_TAG = tag("copper_projectile_shooters");
@@ -23,8 +23,8 @@ public class ModTags {
             return ItemTags.create(EnhancedTools.resource(name));
         }
 
-        private static TagKey<Item> forgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+        private static TagKey<Item> neoforgeTag(String name) {
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("neoforge", name));
         }
     }
 
@@ -33,8 +33,8 @@ public class ModTags {
             return BlockTags.create(EnhancedTools.resource(name));
         }
 
-        private static TagKey<Block> forgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("forge", name));
+        private static TagKey<Block> neoforgeTag(String name) {
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath("neoforge", name));
         }
     }
 }

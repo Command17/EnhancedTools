@@ -4,17 +4,17 @@ import com.github.command17.enhancedtools.EnhancedTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeAdvancementProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.AdvancementProvider;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = EnhancedTools.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = EnhancedTools.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ModDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -25,10 +25,10 @@ public class ModDataGenerators {
 
         BlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(output, lookupProvider, fileHelper);
 
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(output));
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(output, lookupProvider));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(output, fileHelper));
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new ModItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter(), fileHelper));
-        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(output, lookupProvider, fileHelper, List.of(new ModAdvancementProvider())));
+        generator.addProvider(event.includeServer(), new AdvancementProvider(output, lookupProvider, fileHelper, List.of(new ModAdvancementProvider())));
     }
 }

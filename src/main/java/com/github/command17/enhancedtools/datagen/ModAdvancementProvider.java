@@ -4,24 +4,24 @@ import com.github.command17.enhancedtools.EnhancedTools;
 import com.github.command17.enhancedtools.item.ModItems;
 import com.github.command17.enhancedtools.util.ModTags;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.DisplayInfo;
-import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeAdvancementProvider;
+import net.neoforged.neoforge.common.data.AdvancementProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
 
-public class ModAdvancementProvider implements ForgeAdvancementProvider.AdvancementGenerator {
+public class ModAdvancementProvider implements AdvancementProvider.AdvancementGenerator {
     @ParametersAreNonnullByDefault
     @Override
-    public void generate(HolderLookup.Provider provider, Consumer<Advancement> saver, ExistingFileHelper existingFileHelper) {
+    public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolder> saver, ExistingFileHelper existingFileHelper) {
         Advancement.Builder.advancement()
                 .display(
                         new DisplayInfo(
@@ -29,7 +29,7 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
                                 Component.translatable(translate("title.enhancing")),
                                 Component.translatable(translate("description.enhancing")),
                                 null,
-                                FrameType.TASK,
+                                AdvancementType.TASK,
                                 true,
                                 true,
                                 false
@@ -46,14 +46,14 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
         Advancement.Builder.advancement()
                 .addCriterion("has_hammer",
                         InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.NETHERITE_HAMMER.get(), ModItems.COPPER_NETHERITE_HAMMER.get()))
-                .parent(new ResourceLocation("nether/obtain_ancient_debris"))
+                .parent(EnhancedTools.mcResource("nether/obtain_ancient_debris"))
                 .display(
                         new DisplayInfo(
                                 new ItemStack(ModItems.NETHERITE_HAMMER.get()),
                                 Component.translatable(translate("title.obtain_netherite_hammer")),
                                 Component.translatable(translate("description.obtain_netherite_hammer")),
                                 null,
-                                FrameType.CHALLENGE,
+                                AdvancementType.CHALLENGE,
                                 true,
                                 true,
                                 false

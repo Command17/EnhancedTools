@@ -4,6 +4,7 @@ import com.github.command17.enhancedtools.config.ModCommonConfig;
 import com.github.command17.enhancedtools.enchantment.ModEnchantments;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeMod;
 
 import java.util.stream.Stream;
 
@@ -24,7 +24,7 @@ public class BlockUtil {
         Vec3 eyePosition = player.getEyePosition();
         Vec3 rotation = player.getViewVector(1);
 
-        double reach = player.getAttributeValue(ForgeMod.BLOCK_REACH.get());
+        double reach = player.getAttributeValue(Attributes.BLOCK_INTERACTION_RANGE);
 
         Vec3 combined = eyePosition.add(rotation.x * reach, rotation.y * reach, rotation.z * reach);
 

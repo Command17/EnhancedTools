@@ -9,14 +9,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
 @Mod(EnhancedTools.MOD_ID)
@@ -24,10 +24,8 @@ public class EnhancedTools {
     public static final String MOD_ID = "enhancedtools";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public EnhancedTools() {
+    public EnhancedTools(IEventBus eventBus, ModContainer modContainer) {
         LOGGER.info("Initializing...");
-
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         eventBus.addListener(this::commonSetup);
 
@@ -35,21 +33,21 @@ public class EnhancedTools {
         ModEnchantments.register(eventBus);
         ModCreativeModeTabs.register(eventBus);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
 
         eventBus.addListener(this::addCreative);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModCommonConfig.PAIR.getValue());
+        modContainer.registerConfig(ModConfig.Type.COMMON, ModCommonConfig.PAIR.getValue());
 
         LOGGER.info("Initialized.");
     }
 
     public static ResourceLocation resource(String name) {
-        return new ResourceLocation(MOD_ID, name);
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
     }
 
     public static ResourceLocation mcResource(String name) {
-        return new ResourceLocation(name);
+        return ResourceLocation.withDefaultNamespace(name);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {}

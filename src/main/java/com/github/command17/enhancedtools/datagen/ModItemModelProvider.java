@@ -3,13 +3,13 @@ package com.github.command17.enhancedtools.datagen;
 import com.github.command17.enhancedtools.EnhancedTools;
 import com.github.command17.enhancedtools.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -77,21 +77,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.COPPER_NETHERITE_HAMMER);
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+    private ItemModelBuilder handheldItem(DeferredItem<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(EnhancedTools.MOD_ID,"item/" + item.getId().getPath()));
+                EnhancedTools.mcResource("item/handheld")).texture("layer0",
+                EnhancedTools.resource("item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+    private ItemModelBuilder simpleBlockItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EnhancedTools.MOD_ID,"item/" + item.getId().getPath()));
+                EnhancedTools.mcResource("item/generated")).texture("layer0",
+                EnhancedTools.resource("item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+    private ItemModelBuilder simpleItem(DeferredItem<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EnhancedTools.MOD_ID,"item/" + item.getId().getPath()));
+                EnhancedTools.mcResource("item/generated")).texture("layer0",
+                EnhancedTools.resource("item/" + item.getId().getPath()));
     }
 }

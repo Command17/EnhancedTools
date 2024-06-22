@@ -1,9 +1,11 @@
 package com.github.command17.enhancedtools.item;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -13,8 +15,8 @@ import java.util.List;
 public class UniversalDiggerItem extends DiggerItem {
     private final List<TagKey<Block>> otherTagKeys;
 
-    public UniversalDiggerItem(float attackDamage, float attackSpeed, Tier tier, TagKey<Block> mainTagKey, List<TagKey<Block>> otherTagKeys, Properties properties) {
-        super(attackDamage, attackSpeed, tier, mainTagKey, properties);
+    public UniversalDiggerItem(Tier tier, TagKey<Block> mainTagKey, List<TagKey<Block>> otherTagKeys, Properties properties) {
+        super(tier, mainTagKey, properties);
 
         this.otherTagKeys = otherTagKeys;
     }
@@ -22,7 +24,15 @@ public class UniversalDiggerItem extends DiggerItem {
     @ParametersAreNonnullByDefault
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
-        for (TagKey<Block> tagKey: this.otherTagKeys) if (state.is(tagKey)) return this.speed;
+        Tool tool = stack.get(DataComponents.TOOL);
+
+        for (TagKey<Block> tagKey: this.otherTagKeys) {
+            if (state.is(tagKey) && tool != null) {
+                for (Tool.Rule rule : tool.rules()) {
+                    if (rule.speed().isPresent() && state.is(rule.blocks())) return rule.speed().get();
+                }
+            }
+        }
 
         return super.getDestroySpeed(stack, state);
     }

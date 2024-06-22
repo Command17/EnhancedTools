@@ -1,6 +1,7 @@
 package com.github.command17.enhancedtools.datagen;
 
 import com.github.command17.enhancedtools.item.ModItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.TagKey;
@@ -10,15 +11,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
-    public ModRecipeProvider(PackOutput output) {
-        super(output);
+    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider);
     }
 
     @Override
-    protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeConsumer) {
         copperEnhancingRecipe(recipeConsumer, Items.CROSSBOW, RecipeCategory.COMBAT, ModItems.COPPER_CROSSBOW.get());
         copperEnhancingRecipe(recipeConsumer, Items.BOW, RecipeCategory.COMBAT, ModItems.COPPER_BOW.get());
 
@@ -105,11 +106,11 @@ public class ModRecipeProvider extends RecipeProvider {
         copperEnhancingRecipe(recipeConsumer, ModItems.NETHERITE_HAMMER.get(), RecipeCategory.TOOLS, ModItems.COPPER_NETHERITE_HAMMER.get());
     }
 
-    public static void copperEnhancingRecipe(Consumer<FinishedRecipe> recipeConsumer, Item baseItem, RecipeCategory category, Item enhancedItem) {
+    public static void copperEnhancingRecipe(RecipeOutput recipeConsumer, Item baseItem, RecipeCategory category, Item enhancedItem) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.COPPER_ENHANCING_SMITHING_TEMPLATE.get()), Ingredient.of(baseItem), Ingredient.of(Items.COPPER_INGOT), category, enhancedItem).unlocks("has_copper_ingot", has(Items.COPPER_INGOT)).save(recipeConsumer, getItemName(enhancedItem) + "_enhanced_smithing");
     }
 
-    public static void smeltingRecipe(Consumer<FinishedRecipe> recipeConsumer, Item baseItem, RecipeCategory category, Item result, int cookTime, float xp) {
+    public static void smeltingRecipe(RecipeOutput recipeConsumer, Item baseItem, RecipeCategory category, Item result, int cookTime, float xp) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(baseItem), category, result, xp, cookTime)
                 .unlockedBy("has_item", has(baseItem))
                 .save(recipeConsumer, getSmeltingRecipeName(baseItem));
@@ -119,7 +120,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(recipeConsumer, getBlastingRecipeName(baseItem));
     }
 
-    public static void adzeRecipe(Consumer<FinishedRecipe> recipeConsumer, ItemLike material, RecipeCategory category, Item adze) {
+    public static void adzeRecipe(RecipeOutput recipeConsumer, ItemLike material, RecipeCategory category, Item adze) {
         ShapedRecipeBuilder.shaped(category, adze)
                 .pattern(" M")
                 .pattern("MS")
@@ -140,7 +141,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK).unlockedBy("has_material", has(itemMaterial));
     }
 
-    public static void adzeRecipe(Consumer<FinishedRecipe> recipeConsumer, TagKey<Item> material, RecipeCategory category, Item adze) {
+    public static void adzeRecipe(RecipeOutput recipeConsumer, TagKey<Item> material, RecipeCategory category, Item adze) {
         ShapedRecipeBuilder.shaped(category, adze)
                 .pattern("M ")
                 .pattern("SM")

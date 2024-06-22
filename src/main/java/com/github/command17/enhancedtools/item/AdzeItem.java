@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
@@ -15,18 +16,20 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
+import net.neoforged.neoforge.common.ToolAction;
+import net.neoforged.neoforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.Optional;
 
 public class AdzeItem extends UniversalDiggerItem {
-    public AdzeItem(float attackDamage, float attackSpeed, Tier tier, Properties properties) {
-        super(attackDamage, attackSpeed, tier, BlockTags.MINEABLE_WITH_AXE, List.of(BlockTags.MINEABLE_WITH_SHOVEL), properties);
+    public AdzeItem(Tier tier, Properties properties) {
+        super(tier, BlockTags.MINEABLE_WITH_AXE, List.of(BlockTags.MINEABLE_WITH_SHOVEL), properties);
     }
 
+    @ParametersAreNonnullByDefault
     @Override
     public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
         return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) && ModCommonConfig.adzesAllowToolActions.get();
@@ -74,7 +77,7 @@ public class AdzeItem extends UniversalDiggerItem {
             level.setBlock(pos, currentOptional.get(), 11);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, currentOptional.get()));
 
-            if (player != null) stack.hurtAndBreak(1, player, (e) -> e.broadcastBreakEvent(context.getHand()));
+            if (player != null) stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
 
             return InteractionResult.sidedSuccess(level.isClientSide);
         } else return InteractionResult.PASS;
